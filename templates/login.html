@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="page secondary fixed-header">
+    <div class="page-header ">
+        <div class="page-header-content">
+            <a href="/"><h2>Add to Cart!</h2></a>
+        </div>	
+    </div>
+    <div class="page-region">
+    <div style="text-align: center;">
+    <h1>login here</h1>
+    <form name="loginForm" method="post" action="/login">
+                        <h3><br />
+                        <input name="email" type="submit" value="o.mendez.m@gmail.com" onclick="loginSubmit()" /><br />
+                        <input name="email" type="submit" value="willow@127001.org.uk" onclick="loginSubmit()" /><br />
+                        </h3>
+                        <h2>or login to new account</h2>
+                        <h3>
+                        <label for="email">email: </label>
+                        <input name="email" type="text" /><br /><br />
+                        <label for="password">password: </label>
+                        <input name="password" type="password" /><br /><br />
+                        <input name="submit" type="submit" onclick="loginSubmit()" />
+                        </h3>
+                </form>
+    </div>
+{% endblock %}
+    </div>
+</div>

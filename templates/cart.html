@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="page secondary fixed-header">
+    <div class="page-header ">
+        <div class="page-header-content">
+            <div class="user-login">
+                <div class="cart-details">
+                	<span class="detail_txt">Shopping Cart:</span>
+                    	<span class="detail_txt">Number of Items:</span>
+                    	<span class="detail_txt">Savings:</span>
+                </div>
+                	<div class="cart-details">
+                		<span class="detail_num">£{{ cartSummary['BasketGuidePrice'] }}</span>
+                    	        <span class="detail_num">{{ cartSummary['BasketQuantity'] }}</span>
+                    	        <span class="detail_num">£{{ cartSummary['BasketGuideMultiBuySavings'] }}</span>
+                        </div>
+                <a href="http://www.tesco.com" target="_blank"> 
+                    <div class="avatar">
+                        <img src="{{ url_for('static', filename='images/tesco.png') }}"/>
+                    </div>
+                </a>
+            </div>
+
+            <a href="/"><h2>Add to Cart! </h2></a>
+        </div>
+		
+    </div>
+    <div class="page-region">
+
+<div class="page-region-content tiles">
+            <div class="tile-group">
+                <div class="tile bg-color-yellow double triple-vertical outline-color-green">
+                    <div class="grid">
+			<div class="row">
+				<div class="title">
+					<div class="span4"><i class="icon-minus"></i><b>01/10/13</b><i class="icon-plus"></i></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="title">
+					<div class="span2">Delivery Time</div>
+					<div class="span2">Cost</div>
+				</div>
+			</div>
+			<form>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"  checked=""/>
+						    <span class="helper">8:00</span>
+						</label>
+					</div>
+					<div class="span2">£3.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">9:00</span>
+						</label>
+					</div>
+					<div class="span2">£3.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">10:00</span>
+						</label>
+					</div>
+					<div class="span2">£3.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">11:00</span>
+						</label>
+					</div>
+					<div class="span2">£3.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1" />
+						    <span class="helper">12:00</span>
+						</label>
+					</div>
+					<div class="span2">£5.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">13:00</span>
+						</label>
+					</div>
+					<div class="span2">£5.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">14:00</span>
+						</label>
+					</div>
+					<div class="span2">£5.50</div>
+				</div>
+				<div class="row dates">
+					<div class="span2">
+						<label class="input-control radio" onclick="">
+						    <input type="radio" name="r1"/>
+						    <span class="helper">15:00</span>
+						</label>
+					</div>
+					<div class="span2">£4.50</div>
+				</div>
+			</form>
+		    </div>
+                </div>
+				
+		{% for items in range(count) %}
+                        <div class="tile bg-color-{{loop.cycle('blue','orange','green','pink','purple','red')}} icon">
+                                <div class="tile-content">
+                                        <img src="{{ cartItems[items]['ImagePath'] }}" alt="" />
+                                </div>
+                                <div class="brand">
+                                        <span class="name">{{ cartItems[items]['Name'] }}</span>
+                                        <span class="badge">{{ cartItems[items]['BasketLineQuantity'] }}</span>
+                                </div>
+                         </div>
+                {% endfor %}
+
+            </div>
+        </div>
+</div>
+{% endblock %}
+    </div>
+</div>

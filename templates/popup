@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="page-region-content tiles">
+            <div class="tile-group tile-drag">
+                <div class="tile image outline-color-green">
+                    <div class="tile bg-color-yellow icon">
+                        <div class="tile-content">
+                        	<img src="{{ url_for('static', filename='icons/shopping_cart.png') }}"/>
+                    	</div>
+                    	<div class="brand">
+                    		<div class="badge">32</div>
+                        	<div class="name">View Cart:</div>
+                        </div>
+                    </div>
+                </div>
+				
+		<div class="tile bg-color-purple icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/beer.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Spitfire Ale</span>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+                <div class="tile bg-color-pink icon">
+                    <b class="check"></b>
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/coffee.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Starbucks Blend</span>
+                        <span class="badge">8</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-greenDark icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/crab.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Crab Legs</span>
+                        <span class="badge">6</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-red icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/egg.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Caged Eggs</span>
+                        <span class="badge">6</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-blue icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/fish.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <div class="badge">10</div>
+                        <div class="name">Cod</div>
+                    </div>
+                </div>
+		<div class="tile bg-color-greenDark icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/lobster.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Lobster</span>
+                        <span class="badge">6</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-red icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/steak.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Thin Steak</span>
+                        <span class="badge">6</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-orangeDark icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/wine.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">White Wine</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-red icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/beer.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Fosters</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-orangeDark icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/egg.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Free Range Eggs</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+
+                <div class="tile bg-color-purple icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/steak.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Pork Chops</span>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+                <div class="tile bg-color-orangeDark icon">
+                    <div class="tile-content">
+                        <img src="{{ url_for('static', filename='icons/fish.png') }}" alt="" />
+                    </div>
+                    <div class="brand">
+                        <span class="name">Halibut</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+{% endblock %}

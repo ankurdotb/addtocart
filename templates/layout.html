@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Add to Cart Trademark guapOscar Industries">
+    <meta name="author" content="Oscar Mendez">
+    <meta name="keywords" content="windows 8, modern style, modern ui, style, modern, css, framework">
+
+    <link href="{{ url_for('static', filename='css/modern.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/theme-dark.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/modern-responsive.css') }}" rel="stylesheet">
+
+    <script src="{{ url_for('static', filename='js/assets/jquery-1.8.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/assets/google-analytics.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/assets/jquery.mousewheel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/assets/github.info.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modern/tile-slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modern/tile-drag.js') }}"></script>
+
+    <title>Add to Cart &trade;</title>
+
+    <style>
+        body {
+            background: #260930;
+        }
+    </style>
+
+    <script>
+        function Resize(){
+            var tiles_area = 0;
+            $(".tile-group").each(function(){
+                tiles_area += $(this).outerWidth() + 80;
+
+            });
+
+            $(".tiles").css("width", 120 + tiles_area + 20);
+
+            $(".page").css({
+                height: $(document).height() - 20,
+                width: $(document).width()
+            });
+        }
+
+        function AddMouseWheel(){
+            $("body").mousewheel(function(event, delta){
+                var scroll_value = delta * 50;
+                if (!jQuery.browser.chrome) {
+                    document.documentElement.scrollLeft -= scroll_value;
+                } else {
+                    this.scrollLeft -= scroll_value;
+                }
+                return false;
+            });
+        }
+
+        $(function(){
+
+            Resize();
+            AddMouseWheel();
+
+        })
+
+	function popUp() {
+		window.open('http://www.google.com','biz','width=500,height=500')
+	}
+	
+	function formSubmit() {
+	        document.getElementById("cartForm").submit();
+	}
+	
+	function loginSubmit() {
+	        document.getElementById("loginForm").submit();
+	}
+    </script>
+</head>
+<body class="modern-ui" onresize="Resize()">
+	{% block body %}{% endblock %}
+</body>
+</html>

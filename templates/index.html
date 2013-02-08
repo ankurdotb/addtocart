@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="page secondary fixed-header">
+    <div class="page-header ">
+        <div class="page-header-content">
+            <div class="user-login">
+                <div class="cart-details">
+                	<span class="detail_txt">Shopping Cart:</span>
+                    	<span class="detail_txt">Number of Items:</span>
+                    	<span class="detail_txt">Savings:</span>
+                </div>
+                	<div class="cart-details">
+							<span class="detail_num">£{{ cartSummary['BasketGuidePrice'] }}</span>
+                    	    <span class="detail_num">{{ cartSummary['BasketQuantity'] }}</span>
+                    	    <span class="detail_num">£{{ cartSummary['BasketGuideMultiBuySavings'] }}</span>
+                        </div>
+                <a href="http://www.tesco.com" target="_blank"> 
+                    <div class="avatar">
+                        <img src="{{ url_for('static', filename='images/tesco.png') }}"/>
+                    </div>
+                </a>
+            </div>
+
+            <a href="/"><h2>Add to Cart!</h2></a>
+        </div>
+		
+    </div>
+    <div class="page-region">
+
+
+<div class="page-region-content tiles">
+            <div class="tile-group">
+                <a href="/cart">
+                <div class="tile image outline-color-green">
+                    <div class="tile bg-color-yellow icon">
+                        <div class="tile-content">
+                        	<img src="{{ url_for('static', filename='icons/shopping_cart.png') }}"/>
+                    	</div>
+                    	<div class="brand">
+                    		<div class="badge">{{ cartSummary['BasketQuantity'] }}</div>
+                        	<div class="name">View Cart:</div>
+                        </div>
+                    </div>
+                </div>
+                </a>             
+                
+                <form name="cartForm" method="post" action="/">
+                {% for items in range(count) %}
+                         <div class="tile bg-color-{{loop.cycle('blue','orange','green','pink','purple','red')}} icon">
+                                <div class="tile-content">
+                                       <input name="item" type="image" src="{{ itemList[items]['ImagePath'] }}" value="{{ itemList[items]['ProductId'] }}" onclick="formSubmit()" />
+                                </div>
+                                <div class="brand">
+                                        <span class="name">{{ itemList[items]['Name'] }}</span>
+                                </div>
+                         </div>
+                {% endfor %}
+                </form>
+            </div>
+</div>
+{% endblock %}
+    </div>
+</div>
